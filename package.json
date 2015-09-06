@@ -1,0 +1,11 @@
+{
+  "name": "music player",
+  "version": "0.1",
+  "description": "music player for windows",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "senro",
+  "license": "ISC"
+}

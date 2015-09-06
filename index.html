@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Player</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Main frame -->
+    <div class="main-frame">
+
+        <!-- songs -->
+        <div class="songs" id="songs">
+            <div class="controller">
+                <audio id="player"></audio>
+            </div>
+            <div class="playlist">
+
+            </div>
+            <div class="text">Drop your music folder here</div>
+        </div>
+
+        <!-- Menu -->
+        <div class="menu">
+            <!-- <div class="button" id="menu-open">Open Folder</div> -->
+            <!-- <div class="button" id="menu-save">Save Folder</div> -->
+            <div class="button" id="menu-settings">Settings</div>
+            <div class="button" id="menu-info">Info</div>
+            <!-- <div class="drag_folder" id="menu-drag">
+                <p>Drag your music folder right here</p>
+            </div> -->
+        </div>
+
+        <!-- Info -->
+        <div class="info">
+            <div class="close"></div>
+
+            <div class="icon-authors">
+                <h2>Thanks</h2>
+                <!-- Authors of the icons -->
+                <div>
+                    Icons made by
+                    <a href="http://www.flaticon.com/authors/robin-kylander" title="Robin Kylander">Robin Kylander</a>,
+                    <a href="http://www.flaticon.com/authors/budi-tanrim" title="Budi Tanrim">Budi Tanrim</a>,
+                    <a href="http://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a>,
+                    <a href="http://www.flaticon.com/authors/coucou" title="Coucou">Coucou</a>,
+                    <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>,
+                    <a href="http://www.flaticon.com/authors/catalin-fertu" title="Catalin Fertu">Catalin Fertu</a>,
+                    <a href="http://www.flaticon.com/authors/appzgear" title="Appzgear">Appzgear</a>,
+                    <a href="http://www.flaticon.com/authors/icon-works" title="Icon Works">Icon Works</a>
+                    from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>
+                    is licensed by
+                    <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Bottom menu -->
+        <div class="bottom-menu">
+            <div class="icon" id="bottom-menu-open"></div>
+            <div class="icon" id="bottom-menu-search"></div>
+            <div class="playerBar">
+                <div class="icon" id="bottom-menu-previous"></div>
+                <div class="icon" id="bottom-menu-play"></div>
+                <div class="icon" id="bottom-menu-next"></div>
+                <div class="icon" id="bottom-menu-repeat"></div>
+                <div class="icon" id="bottom-menu-shuffle"></div>
+                <div class="sound">
+                    <div class="icon" id="bottom-menu-sound"></div>
+                    <p>100%</p>
+                    <div class="value" id="playerBar-sound">
+                        <div class="slider" id="sound-slider"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div class="progress" id="playerBar-progress">
+                    <div class="slider" id="progress-slider"></div>
+                    <div class="line"></div>
+                    <p class="current">0:00</p>
+                    <p class="songName"></p>
+                    <p class="end">0:00</p>
+                </div>
+            </div>
+            <input type="text" id="bottom-menu-search-input" placeholder="Search">
+        </div>
+    </div>
+    <!-- Errors -->
+
+    <script src="js/main.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>

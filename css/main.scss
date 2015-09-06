@@ -1,0 +1,26 @@
+@font-face{
+	font-family: "Cuprum";
+	src: url("../fonts/Cuprum-Regular.ttf");
+}
+@font-face{
+	font-family: "Scada";
+	src: url("../fonts/Scada.ttf");
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+body{
+	background-image: url("../1.jpg");
+    background-size: cover;
+	user-select: none;
+}
+
+@import "main-frame";
+@import "info";
+@import "songs";

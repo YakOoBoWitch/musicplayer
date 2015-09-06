@@ -1,0 +1,33 @@
+.info{
+    z-index: 1100;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    box-sizing: padding-box;
+    padding: 0 10px 0 10px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #eee;
+    font-family: "Scada";
+    text-align: center;
+
+    .close{
+        position: fixed;
+        width: 32px;
+        height: 32px;
+        right: 10px;
+        top: 10px;
+        background-image: url("../icon/close.png");
+        cursor: pointer;
+    }
+
+    a{
+        color: #13a4f3;
+        font-family: "Cuprum";
+        text-decoration: none;
+    }
+    h2{
+        color: #ddd;
+        font-family: Trebuchet MS;
+    }
+}

@@ -1,0 +1,210 @@
+.main-frame .menu,
+.main-frame .bottom-menu{
+    user-select: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: default;
+}
+
+.main-frame .menu{
+    z-index: 1020;
+    width: 0;
+    height: calc(100% - 36px);
+    top: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+
+    .button{
+        width: 100%;
+        height: 36px;
+        box-sizing: border-box;
+        border: 1px solid rgba(0,0,0,0);
+        color: #eee;
+        font-size: 20px;
+        transition: 0.2s ease;
+        text-align: center;
+        cursor: pointer;
+        line-height: 36px;
+    }
+    .button:hover{
+        background: rgba(10, 10, 30, 0.5);
+        color: #fff;
+    }
+
+    .drag_folder{
+        width: 200px;
+        height: 200px;
+        margin-left: 25px;
+        border: 3px dashed #ddd;
+        cursor: default;
+        color: #ddd;
+        text-align: center;
+        text-shadow: 1px 1px 1px black;
+        font-size: 18px;
+        font-family: "Scada";
+        transition: 0.3s ease;
+    }
+}
+
+.main-frame .bottom-menu{
+    width: 100%;
+    height: 36px;
+
+    .icon{
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        margin-top: 2px;
+        z-index: 1005;
+        cursor: pointer;
+    }
+    .playerBar{
+        position: absolute;
+        width: calc(100% - 83px);
+        height: 32px;
+        margin-left: 76px;
+        margin-top: 2px;
+        // background: rgba(0,0,0, 0.3);
+        opacity: 0.1;
+        transition: 0.3s ease;
+        font-family: "Scada", Trebuchet MS, georgia;
+
+
+        .icon{
+            position: relative;
+            margin-top: 0;
+            display: inline-block;
+            cursor: default;
+        }
+        .progress{
+            width: calc(100% - 350px);
+            height: 3px;
+            background: #aaa;
+            margin-top: 20px;
+            float: right;
+
+            .line{
+                height: 3px;
+                width: 0;
+            }
+            .slider{
+                top: 16px;
+                margin-left: 0;
+            }
+            p{
+                position: absolute;
+                top: -16px;
+                color: #eee;
+            }
+            .songName{
+                margin-left: 50px;
+            }
+            .end{
+                left: calc(100% - 32px);
+            }
+        }
+
+        .slider{
+            position: absolute;
+            width: 3px;
+            height: 10px;
+            border-radius: 2px;
+            background: #eee;
+            cursor: default;
+        }
+        .line{
+            background: #fff;
+        }
+
+        .sound{
+            width: 98px;
+            height: 24px;
+            display: inline-block;
+            transform: translateY(-3px);
+
+            p{
+                position: absolute;
+                color: #fff;
+                margin-left: 102px;
+                margin-top: 3px;
+            }
+            .value{
+                width: 70px;
+                height: 2px;
+                background: #aaa;
+                float: right;
+                margin-top: 12px;
+                display: inline-block;
+
+                .line{
+                    width: 70px;
+                    height: 2px;
+                }
+                .slider{
+                    top: 8px;
+                    margin-left: 70px;
+                }
+            }
+        }
+    }
+}
+#bottom-menu-open{
+    margin-left: 2px;
+    background-image: url("../icon/menu.png");
+    transition: 0.3s ease;
+}
+#bottom-menu-search{
+    margin-left: 38px;
+    background-image: url("../icon/search.png");
+    transform: rotate(90deg);
+    opacity: 0.8;
+}
+#bottom-menu-search-input{
+    position: absolute;
+    width: calc(100% - 83px);
+    height: 24px;
+    padding: 3px;
+    margin-left: 73px;
+    margin-top: 38px;
+    font-size: 18px;
+    font-family: "Cuprum";
+    background: rgba(10, 10, 30, 0.1);
+    border: 1px solid rgba(10, 80, 130, 0.2);
+    transition: 0.2s ease;
+    color: #eee;
+}
+#bottom-menu-search-input:focus{
+    border: 1px solid rgba(10, 80, 190, 0.5);
+    background: rgba(10, 10, 30, 0);
+    outline: none;
+}
+
+//Player bar
+#bottom-menu-previous{
+    background-image: url("../icon/previous.png");
+    margin-left: 25px;
+    transform: rotate(180deg);
+}
+#bottom-menu-play{ background-image: url("../icon/play.png"); }
+#bottom-menu-next{ background-image: url("../icon/previous.png"); }
+#bottom-menu-repeat{
+    background-image: url("../icon/repeat.png");
+    opacity: 0.5;
+}
+#bottom-menu-shuffle{
+    background-image: url("../icon/shuffle.png");
+    opacity: 0.5;
+}
+#bottom-menu-sound{
+    width: 24px;
+    height: 24px;
+    background-image: url("../icon/sound.png");
+    float: left;
+}
+
+//Some crap for drag and drop
+.dragover{
+    background: rgba(255, 255, 255, 0.1);
+}
